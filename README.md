@@ -201,7 +201,7 @@ SELECT * FROM BOOKS
 WHERE CATEGORY = 'History'
 ```
 
-9. **Task 9: Find Total Rental Income by Category**:
+**Task 9:** Find Total Rental Income by Category:
 
 ```sql
 SELECT
@@ -213,13 +213,13 @@ ON IST.ISSUED_BOOK_ISBN = B.ISBN
 GROUP BY 1
 ```
 
-10. **List Members Who Registered in the Last 500 Days**:
+**Task 10:** **List Members Who Registered in the Last 500 Days**:
 ```sql
 SELECT * FROM MEMBERS
 WHERE REG_DATE >= CURRENT_DATE - INTERVAL '500 DAYS'
 ```
 
-11: **List Employees with Their Branch Manager's Name and their branch details**:
+**Task 11:** List Employees with Their Branch Manager's Name and their branch details:
 
 ```sql
 SELECT 
@@ -238,7 +238,7 @@ EMPLOYEES AS E2
 ON E2.EMP_ID = B.MANAGER_ID
 ```
 
-Task 12: **Task 12: Create a Table of Books with Rental Price Above 7$:**
+**Task 12:** Create a Table of Books with Rental Price Above 7$:
 ```sql
 CREATE TABLE EXPENSIVE_BOOKS AS
 SELECT * FROM BOOKS
@@ -246,7 +246,7 @@ WHERE RENTAL_PRICE > 7.0
 SELECT * FROM EXPENSIVE_BOOKS
 ```
 
-Task 13: **Retrieve the List of Books Not Yet Returned**
+**Task 13:** Retrieve the List of Books Not Yet Returned
 ```sql
 SELECT
 DISTINCT IST.ISSUED_BOOK_NAME
@@ -396,7 +396,7 @@ SELECT * FROM ACTIVE_MEMBERS
 ```
 
 
-**Task 18: Find Employees with the Most Book Issues Processed. Write a query to find the employees who have processed the book issues.
+**Task 18:** Find Employees with the Most Book Issues Processed. Write a query to find the employees who have processed the book issues.
 Also find the total number of books issued by them. Display the employee name, number of books processed, and their branch.
 ```sql
 SELECT
@@ -412,7 +412,7 @@ ON B.BRANCH_ID = E.BRANCH_ID
 GROUP BY 1,2
 ```
 
-Task 19: Find Employees with the Most Book Issues Processed.
+**Task 19: Find Employees with the Most Book Issues Processed.**
 Write a query to find the top 3 employees who have processed the most book issues. Display the employee name, number of books processed, and their branch.
 
 ```sql
@@ -432,10 +432,8 @@ LIMIT 3
 ```
 
 **Task 20: Stored Procedure**
-Objective:
-Create a stored procedure to manage the status of books in a library system.
-Description:
-Write a stored procedure that updates the status of a book in the library based on its issuance. The procedure should function as follows:
+Objective: Create a stored procedure to manage the status of books in a library system.
+Description: Write a stored procedure that updates the status of a book in the library based on its issuance. The procedure should function as follows:
 The stored procedure should take the book_id as an input parameter.
 The procedure should first check if the book is available (status = 'yes').
 If the book is available, it should be issued, and the status in the books table should be updated to 'no'.
