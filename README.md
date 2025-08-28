@@ -160,7 +160,7 @@ WHERE ISSUED_EMP_ID = 'E101'
 ```
 
 
-**Task 5: List Members IDs of those who have issued more than one book with total number of books issued by them.
+**Task 5:** List Members IDs of those who have issued more than one book with total number of books issued by them.
 
 ```sql
 SELECT ISSUED_MEMBER_ID, 
@@ -170,7 +170,7 @@ GROUP BY 1
 HAVING COUNT(*) > '1'
 ```
 
-**Task 6: Select names of those members who have issued more than one book.
+**Task 6:** Select names of those members who have issued more than one book.
 
 ```sql
 SELECT MEMBERS.MEMBER_NAME, ISSUED_STATUS.ISSUED_MEMBER_ID, 
@@ -181,7 +181,7 @@ GROUP BY MEMBERS.MEMBER_NAME, ISSUED_STATUS.ISSUED_MEMBER_ID
 HAVING COUNT(ISSUED_STATUS.ISSUED_MEMBER_ID) > '1'
 ```
 
-Task 7: Create Summary Tables: Use CTAS to generate new tables based on query results - each book and total book_issued_count
+**Task 7:** Create Summary Tables: Use CTAS to generate new tables based on query results - each book and total book_issued_count
 
 ```sql
 CREATE TABLE BOOK_COUNTS
@@ -195,7 +195,7 @@ ON IST.ISSUED_BOOK_ISBN = B.ISBN
 GROUP BY 1, 2
 ```
 
-8. **Task 8: Retrieve All Books in a Specific Category**:
+**Task 8:** Retrieve All Books in a Specific Category**:
 ```sql 
 SELECT * FROM BOOKS
 WHERE CATEGORY = 'History'
