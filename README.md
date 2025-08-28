@@ -1,4 +1,6 @@
-# Library Management System using SQL Project --P2
+# Library Management System Project
+
+**Data Analysis using SQL**
 
 ## Project Overview
 
